@@ -1,0 +1,33 @@
+/* Reset básico e configurações iniciais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 2560px;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul[role="list"], ul, ol {
+  list-style: none;
+}
