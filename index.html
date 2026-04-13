@@ -10,34 +10,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <img src="/images/logo.svg" alt="Logo quicklist">
-    <span>quicklist</span>
-  </header>
-
-  <main>
-
-    <div>
-      <a href="#" id="btn-voltar" class="link-button">
-        &larr; Voltar
-      </a>
-      <h1>Compras da semana</h1>
-    </div>
-    
-    <form>
-      <input type="text" placeholder="Adicione um novo item" required>
-      <button type="submit">Adicionar item</button>
-    </form>
-
-    <ul id="lista-compras">
-      <li>Pão de forma</li>
-      <li>Café Preto</li>
-      <li>Suco de Laranja</li>
-      <li>Bolacha</li>
-    </ul>
-    
-  </main>
+  <div id="container">
+		<header>
+			<img src="/assets/logo.svg" alt="Logo quicklist">
+			<span id="nome-logo">quicklist</span>
+		</header>
+		<main>
+			<div>
+				<a href="#" id="btn-voltar" class="link-button">
+					&larr; Voltar
+				</a>
+				<h1>Compras da semana</h1>
+			</div>
+		
+			<form>
+				<input type="text" placeholder="Adicione um novo item" required>
+				<button type="submit">Adicionar item</button>
+			</form>
+			<ul id="lista-compras">
+				<li class="item-lista">
+					<input type="checkbox" id="cafe-preto" />
+					<label for="cafe-preto">Café preto</label>
+					<button type="button" class="btn-delete">
+						<img src="/assets/btn_delete.svg" alt="Remover item" />
+					</button>
+				</li>
+				<li class="item-lista">
+					<input type="checkbox" id="suco-de-laranja" />
+					<label for="suco-de-laranja">Suco de laranja</label>
+					<button type="button" class="btn-delete">
+						<img src="/assets/btn_delete.svg" alt="Remover item" />
+					</button>
+				</li>
+				<li class="item-lista">
+					<input type="checkbox" id="bolacha" />
+					<label for="bolacha">Bolacha</label>
+					<button type="button" class="btn-delete">
+						<img src="/assets/btn_delete.svg" alt="Remover item" />
+					</button>
+				</li>
+			</ul>
+		
+		</main>
+	</div>
   
   <script src="script.js"></script>
 </body>
