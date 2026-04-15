@@ -2,7 +2,7 @@ const inputText = document.querySelector('#new-item-input');
 const formListaItens = document.querySelector('#shopping-list-form');
 const listaItens = document.querySelector('.shopping-list');
 const alertaMenssagem = document.querySelector('.alert-is-hidden');
-const progressBar = document.querySelector('.alerta-progress');
+const progressBar = document.querySelector('.alert-progress');
 
 let alertTimeout;
 
@@ -15,7 +15,7 @@ inputText.addEventListener('input', (event) => {
 
 formListaItens.addEventListener('submit', (event) => {
   event.preventDefault();
-  
+
   const item = inputText.value.trim();
 
   if (item === '') return;
@@ -27,7 +27,7 @@ formListaItens.addEventListener('submit', (event) => {
 
     <div class="item-conteudo">
       <input type="checkbox" id="${item}" class="checkbox-item" />
-      <label for="${item}">${item}</label>
+      <label class="item-name" for="${item}">${item}</label>
     </div>
 
     <button type="button" class="btn-delete" aria-label="Remover item">
