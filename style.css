@@ -43,7 +43,7 @@ header {
   margin-bottom: 4.875rem;
 }
 
-#nome-logo {
+#logo-name {
   font-size: 1.667rem;
   font-weight: bold;
   line-height: 2.5rem; ;
@@ -56,26 +56,26 @@ a {
   font-weight: 500;
 }
 
-#btn-voltar {
+#btn-back {
   color: var(--color-brand);
   font-size: 0.875rem;
   line-height: 1rem;
   margin-bottom: 1rem;
 }
 
-#btn-voltar:hover {
+#btn-back:hover {
   color: var(--color-brand-hover);
   text-decoration: underline;
 }
 
-#compras-da-semana {
+#weekly-shopping {
   font-size: 1.5rem;
   line-height: 2rem;
   color: var(--content-primary);
   margin-bottom: 2.75rem;
 }
 
-#formulario-lista-compras {
+#shopping-list-form {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -83,7 +83,7 @@ a {
   margin-bottom: 2.5rem;
 }
 
-#input-add-item {
+#new-item-input {
   flex: 1;
   height: 2.75rem;
   padding: 0 1.125rem;
@@ -94,13 +94,13 @@ a {
   font-size: 1rem;
 }
 
-#input-add-item:hover {
+#new-item-input:hover {
   border-color: var(--border-hover);
   transition: background-color 0.5s ease;
 
 }
 
-#input-add-item:focus {
+#new-item-input:focus {
   outline: none;
   border-color: var(--color-brand);
 }
@@ -128,7 +128,7 @@ a {
   }
 }
 
-.lista-compras{
+.shopping-list{
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -205,6 +205,75 @@ a {
 
 .btn-delete:hover svg path{
   stroke: var(--color-danger);
+}
+
+#alert{
+  margin-top: 2.25rem;
+  background-color: var(--color-danger);
+  color: var(--always-white);
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 0.75rem;
+
+  width: 100%;
+  height: 44px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#alert button {
+  border: none;
+  background-color: var(--color-danger);
+  color: var(--always-white);
+}
+
+.alert-is-hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.alerta-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--always-white);
+  transform-origin: left;
+  transform: scaleX(1);
+  border-radius: 0.75rem;
+}
+
+.animar {
+  animation: diminuirTempo 3s linear;
+}
+
+@keyframes diminuirTempo {
+  from {
+    transform: scaleX(1);
+  } to {
+    transform: scaleX(0);
+  }
+}
+
+.alert-close-btn {
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  border-style: none;
+  background-color: var(--color-danger);
 }
 
 button, input, textarea, select {
